@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90750085-1637-4189-9039-E99C3F90298B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>giaodienQLQuanTS</RootNamespace>
+    <AssemblyName>giaodienQLQuanTS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Ban_BLL.cs" />
+    <Compile Include="BLL\ChiTietHoaDon_BLL.cs" />
+    <Compile Include="BLL\DanhMuc_BLL.cs" />
+    <Compile Include="BLL\HoaDon_BLL.cs" />
+    <Compile Include="BLL\Menu_BLL.cs" />
+    <Compile Include="BLL\SanPham_BLL.cs" />
+    <Compile Include="BLL\TaiKhoan_BLL.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\SP_Login_Result.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\BAN.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view\BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\BanHang.Designer.cs">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CHITIETHOADON.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view\ChonMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ChonMon.Designer.cs">
+      <DependentUpon>ChonMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DANHMUC.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HOADON.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLTS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLTS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\SANPHAM.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TAIKHOAN.cs">
+      <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view\TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\ThayDoiTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ThayDoiTaiKhoan.Designer.cs">
+      <DependentUpon>ThayDoiTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\BanHang.resx">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ChonMon.resx">
+      <DependentUpon>ChonMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\ThayDoiTaiKhoan.resx">
+      <DependentUpon>ThayDoiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ThongTinTaiKhoan.resx">
+      <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="DTO\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="DTO\QLTS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLTS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\QLTS.edmx.diagram">
+      <DependentUpon>QLTS.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DTO\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\QLTS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLTS.Context.cs</LastGenOutput>
+      <DependentUpon>QLTS.edmx</DependentUpon>
+    </Content>
+    <Content Include="DTO\QLTS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLTS.edmx</DependentUpon>
+      <LastGenOutput>QLTS.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
